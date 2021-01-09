@@ -10,7 +10,7 @@ export class ShortDetailComponent implements OnInit {
   obj ={
     points:20,
     publisher:"Tester",
-    time:35
+    time:37
   }
 
   constructor() { }
