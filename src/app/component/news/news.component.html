@@ -1,1 +1,6 @@
-<app-short-detail></app-short-detail>
+<div *ngFor="let article of articles; let indexOfelement = index">
+  <app-short-detail
+    [news]="article"
+    [indexElt]="indexOfelement"
+  ></app-short-detail>
+</div>

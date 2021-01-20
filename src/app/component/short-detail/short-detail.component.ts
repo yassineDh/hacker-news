@@ -1,21 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-short-detail',
   templateUrl: './short-detail.component.html',
-  styleUrls: ['./short-detail.component.scss']
+  styleUrls: ['./short-detail.component.scss'],
 })
 export class ShortDetailComponent implements OnInit {
+  @Input() news: any;
+  @Input() indexElt: any;
 
-  obj ={
-    points:20,
-    publisher:"Tester",
-    time:37
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  testLog(): void {
+    console.log('useeeeer');
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  testLogOut(urlOut: any): void {
+    console.log('out');
+    window.open(urlOut, '_blank');
   }
-
 }

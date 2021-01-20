@@ -11,6 +11,12 @@ import { AskComponent } from './component/ask/ask.component';
 import { JobsComponent } from './component/jobs/jobs.component';
 import { ShortDetailComponent } from './component/short-detail/short-detail.component';
 import {MatCardModule} from '@angular/material/card';
+import { DetailsComponent } from './component/details/details.component';
+import { ArticlesService } from './services/articles.service';
+import { HttpClientModule } from '@angular/common/http';
+import { MomentModule } from 'ngx-moment';
+import { StopClickPropagationDirective } from './directives/stop-click-propagation.directive';
+
 
 @NgModule({
   declarations: [
@@ -20,15 +26,19 @@ import {MatCardModule} from '@angular/material/card';
     ShowComponent,
     AskComponent,
     JobsComponent,
-    ShortDetailComponent
+    ShortDetailComponent,
+    DetailsComponent,
+    StopClickPropagationDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule,
+    MomentModule
   ],
-  providers: [],
+  providers: [ArticlesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
