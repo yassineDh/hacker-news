@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const URL_API = 'https://newsapi.org/v2/top-headlines?country=us';
+const URL_API_ARTICLES = 'https://newsapi.org/v2/everything?q=programming';
+const URL_API_SOURCES = 'https://newsapi.org/v2/sources?';
 
 @Injectable({
   providedIn: 'root',
@@ -16,6 +17,10 @@ export class ArticlesService {
   );
 
   public getArticles(): Observable<any> {
-    return this.httpClient.get(URL_API, { headers: this.headers });
+    return this.httpClient.get(URL_API_ARTICLES, { headers: this.headers });
+  }
+
+  public getSources(): Observable<any> {
+    return this.httpClient.get(URL_API_SOURCES, { headers: this.headers });
   }
 }

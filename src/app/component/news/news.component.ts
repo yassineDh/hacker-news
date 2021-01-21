@@ -10,6 +10,7 @@ export class NewsComponent implements OnInit {
 
   articles =[];
 
+  p: number = 2;
   constructor(private articleService :ArticlesService) { }
 
   ngOnInit(): void {

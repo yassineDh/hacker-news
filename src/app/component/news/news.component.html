@@ -1,6 +1,6 @@
-<div *ngFor="let article of articles; let indexOfelement = index">
+<div *ngFor="let article of articles| paginate: { itemsPerPage: 10, currentPage: p }">
   <app-short-detail
     [news]="article"
-    [indexElt]="indexOfelement"
   ></app-short-detail>
 </div>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

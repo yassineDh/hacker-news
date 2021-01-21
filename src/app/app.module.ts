@@ -16,6 +16,8 @@ import { ArticlesService } from './services/articles.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MomentModule } from 'ngx-moment';
 import { StopClickPropagationDirective } from './directives/stop-click-propagation.directive';
+import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
+
 
 
 @NgModule({
@@ -36,7 +38,8 @@ import { StopClickPropagationDirective } from './directives/stop-click-propagati
     BrowserAnimationsModule,
     MatCardModule,
     HttpClientModule,
-    MomentModule
+    MomentModule,
+    NgxPaginationModule
   ],
   providers: [ArticlesService],
   bootstrap: [AppComponent]
