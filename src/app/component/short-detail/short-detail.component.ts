@@ -33,4 +33,11 @@ export class ShortDetailComponent implements OnInit {
     window.open(urlOut, '_blank');
   }
 
+  commentRed(){
+    console.log("comment");
+    var enc = window.btoa(unescape(encodeURIComponent(this.news.title)));
+
+    this.router.navigate(['/comments',enc]);
+  }
+
 }

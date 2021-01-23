@@ -1,0 +1,12 @@
+<div class="container-fluid">
+
+  <form [formGroup]="myForm" (ngSubmit)="submitHandler()" class="row">
+    <textarea formControlName="comment" class="col-8"></textarea>
+    <button>Submit</button>
+  </form>
+  <div class="row" *ngFor="let con of comments">
+    <p>
+      {{con}}
+    </p>
+  </div>
+</div>

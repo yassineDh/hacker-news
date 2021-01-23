@@ -16,9 +16,9 @@ import { ArticlesService } from './services/articles.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MomentModule } from 'ngx-moment';
 import { StopClickPropagationDirective } from './directives/stop-click-propagation.directive';
-import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
-
-
+import {NgxPaginationModule} from 'ngx-pagination';
+import { CommentsComponent } from './component/comments/comments.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
     JobsComponent,
     ShortDetailComponent,
     DetailsComponent,
-    StopClickPropagationDirective
+    StopClickPropagationDirective,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +40,8 @@ import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
     MatCardModule,
     HttpClientModule,
     MomentModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ReactiveFormsModule
   ],
   providers: [ArticlesService],
   bootstrap: [AppComponent]

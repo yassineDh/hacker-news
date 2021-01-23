@@ -1,15 +1,15 @@
 <mat-card (click)="testLogOut(news.url)">
   <mat-card-header>
-    <mat-card-title class="mb-0"> {{ news.title }}</mat-card-title>
-    <mat-card-subtitle appStopClickPropagation class="mb-0" (click)="testLog()" role="button">( {{ news.source.name }} )</mat-card-subtitle>
+    <mat-card-title class="mb-0" role="button">
+      {{ news.title }}</mat-card-title>
+    <mat-card-subtitle appStopClickPropagation class="mb-0" (click)="testLog()" role="button">( {{ news.source.name }} )
+    </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content class="container">
     <div class="row">
-      <p class="col-2 px-0 mb-0">
-        7 points by {{ news.author }}
-      </p>
-      <p class="col-4 px-0 mb-0">
-        {{ news.publishedAt | amTimeAgo }} | discuss
+      <p class="col-2 px-0 mb-0">7 points by {{ news.author }}</p>
+      <p appStopClickPropagation class="col-4 px-0 mb-0">
+        {{ news.publishedAt | amTimeAgo }} | <span appStopClickPropagation role="button" (click)="commentRed()">discuss</span>
       </p>
     </div>
   </mat-card-content>
